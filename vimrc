@@ -77,3 +77,13 @@ let g:user_zen_settings = {
 "Ever notice a slight lag after typing the leader key + command? This lowers
 "the timeout.
 set timeoutlen=500
+
+" Setting up autoindent
+set cinkeys=0{,0},0),0#,!<Tab>,;,:,o,O,e
+set indentkeys=!<Tab>,o,O
+map <Tab> i<Tab><Esc>^
+
+" Line and column shortcuts
+map <leader>m :set columns=171<cr>:set lines=35<cr>
+map <leader>mm :set columns=171<cr>:set lines=60<cr>
+map <leader>s :vsplit<cr>:split<cr><C-w>l:split<cr><C-w>h<cr>
